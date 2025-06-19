@@ -17,6 +17,17 @@ const schema = a.schema({
     allow.authenticated().to(["read"]),
     allow.owner()
   ]),
+
+  Child: a
+    .model({
+      uid: a.string().required()
+      
+    })
+
+    .authorization(allow => [
+    allow.authenticated().to(["read"]),
+    allow.owner()
+  ]),
   
   //.authorization((allow) => [allow.authenticated()]),
 
