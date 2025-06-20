@@ -25,8 +25,8 @@ const schema = a.schema({
     })
 
     .authorization(allow => [
-    allow.public().to(["read"]),    
-    allow.authenticated().to(["read"]),
+    allow.publicApiKey(),   
+    // allow.authenticated().to(["read"]),
     allow.owner()
   ]),
   
