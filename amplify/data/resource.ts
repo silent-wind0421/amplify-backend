@@ -30,6 +30,18 @@ const schema = a.schema({
     allow.owner()
   ]),
   
+  User: a
+    .model({
+      id: a.string().required()
+      uname_kana: a.string().required()
+    })
+
+    .authorization(allow => [
+    //allow.publicApiKey(),   
+      allow.authenticated().to(["read"]),
+      allow.owner()
+  ]),
+
   //.authorization((allow) => [allow.authenticated()]),
 
     //.authorization((allow) => [allow.publicApiKey()]),
