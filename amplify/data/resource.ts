@@ -32,7 +32,7 @@ const schema = a.schema({
   
   User: a
     .model({
-      id: a.string().required(),
+      uid: a.string().required(),
       uname_kana: a.string().required(),
     })
 
