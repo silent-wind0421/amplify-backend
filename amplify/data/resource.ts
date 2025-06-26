@@ -35,6 +35,7 @@ const schema = a.schema({
       uid: a.string().required(),
       uname_kana: a.string().required(),
     })
+    .identifier(['uid'])
 
     .authorization(allow => [
       allow.publicApiKey(),   
