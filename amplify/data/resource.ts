@@ -32,10 +32,10 @@ const schema = a.schema({
   
   User: a
     .model({
-      uid: a.string().required(),
+      id: a.string().required(),
       uname_kana: a.string().required(),
     })
-    .identifier(['uid'])
+    .identifier(['id'])
 
     .authorization(allow => [
       allow.publicApiKey(),   
