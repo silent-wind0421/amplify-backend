@@ -32,8 +32,8 @@ const schema = a.schema({
   
   User: a
     .model({
-      id: a.string().required()
-      uname_kana: a.string().required()
+      id: a.string().required(),
+      uname_kana: a.string().required(),
     })
 
     .authorization(allow => [
