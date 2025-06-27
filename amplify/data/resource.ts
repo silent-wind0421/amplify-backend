@@ -32,12 +32,12 @@ const schema = a.schema({
   
   User: a
     .model({
-      id: a.string().required(),
       uname: a.string(),
       uname_kana: a.string(),
       certification: a.string(),
       m_number: a.string(),
       city: a.string(),
+      id: a.string().required(),
       date_of_issue: a.string(),
       bdsd: a.string(),
       bded: a.string(),
