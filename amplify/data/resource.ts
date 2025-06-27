@@ -33,7 +33,7 @@ const schema = a.schema({
   User: a
     .model({
       id: a.string().required(),
-      uname: a.string().required(),
+      uname: a.string(),
       uname_kana: a.string(),
       certification: a.string(),
       m_number: a.string(),
@@ -41,7 +41,7 @@ const schema = a.schema({
       date_of_issue: a.string(),
       bdsd: a.string(),
       bded: a.string(),
-      cname: a.string().required(),
+      cname: a.string(),
       cname_kana: a.string(),
       gender: a.string(),
       birthdate: a.string(),
