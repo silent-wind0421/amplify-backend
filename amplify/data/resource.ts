@@ -39,8 +39,10 @@ const schema = a.schema({
       firstNameKana: a.string(),
       dob: a.string(),
       qrCodeName: a.string(),
-      guardians: a.list(),
+      guardians: a.string(),
       officeId: a.string(),
+      createdBy:a.string(),
+      updatedBy:a.string(),
       version: a.number()
     })
     .identifier(['recipientId'])
