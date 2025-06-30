@@ -43,7 +43,7 @@ const schema = a.schema({
       officeId: a.string(),
       createdBy:a.string(),
       updatedBy:a.string(),
-      version: a.number()
+      version: a.integer()
     })
     .identifier(['recipientId'])
 
