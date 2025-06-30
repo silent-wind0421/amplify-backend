@@ -32,39 +32,19 @@ const schema = a.schema({
   
   User: a
     .model({
-      uname: a.string(),
-      uname_kana: a.string(),
-      certification: a.string(),
-      m_number: a.string(),
-      city: a.string(),
-      id: a.string().required(),
-      date_of_issue: a.string(),
-      bdsd: a.string(),
-      bded: a.string(),
-      cname: a.string(),
-      cname_kana: a.string(),
-      gender: a.string(),
-      birthdate: a.string(),
-      sdd: a.string(),
-      sibling: a.string(),
-      ISA_1: a.string(),
-      ISA_2: a.string(),
-      ISA_3: a.string(),
-      ubr_p: a.string(),
-      mmb: a.string(),
-      cmo: a.string(),
-      service: a.string(),
-      payment_amount: a.string(),
-      pdsd: a.string(),
-      pded: a.string(),
-      contract_office: a.string(),
-      c_service: a.string(),
-      contract_amount: a.string(),
-      contract_date: a.string(),
-      ed_of_contract: a.string(),
-      counselling_office: a.string(),     
+      recipientId: string().required(),
+      lastName: string(),
+      firstName: string(),
+      lastNameKana: string(),
+      firstNameKana: string(),
+      dob: string(),
+      qrCodeName: string(),
+      guardians: list(),
+      officeId: string(),
+      isDeleted: boolean(),
+      version: number()
     })
-    .identifier(['id'])
+    .identifier(['recipientId'])
 
     .authorization(allow => [
       allow.publicApiKey(),   
