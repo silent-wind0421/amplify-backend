@@ -32,17 +32,16 @@ const schema = a.schema({
   
   User: a
     .model({
-      recipientId: string().required(),
-      lastName: string(),
-      firstName: string(),
-      lastNameKana: string(),
-      firstNameKana: string(),
-      dob: string(),
-      qrCodeName: string(),
-      guardians: list(),
-      officeId: string(),
-      isDeleted: boolean(),
-      version: number()
+      recipientId: a.string().required(),
+      lastName: a.string(),
+      firstName: a.string(),
+      lastNameKana: a.string(),
+      firstNameKana: a.string(),
+      dob: a.string(),
+      qrCodeName: a.string(),
+      guardians: a.list(),
+      officeId: a.string(),
+      version: a.number()
     })
     .identifier(['recipientId'])
 
