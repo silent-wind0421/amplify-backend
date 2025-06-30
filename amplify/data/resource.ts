@@ -34,7 +34,7 @@ const schema = a.schema({
   ]),
   
   
-  const UserGuardian = a.customType({
+  UserGuardian: a.customType({
     userId: a.string().required(),
     lastName: a.string(),
     firstName: a.string(),
