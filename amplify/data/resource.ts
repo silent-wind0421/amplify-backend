@@ -48,7 +48,7 @@ const schema = a.schema({
     isEmailLeaveRequired: a.boolean(),
     isLineArrivalRequired: a.boolean(),
     isLineLeaveRequired: a.boolean(),
-  });
+  }),
 
   User: a
     .model({
