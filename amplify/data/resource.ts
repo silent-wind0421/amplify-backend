@@ -6,6 +6,25 @@ adding a new "isDone" field as a boolean. The authorization rule below
 specifies that any user authenticated via an API key can "create", "read",
 "update", and "delete" any "Todo" records.
 =========================================================================*/
+
+
+const UserGuardian = a.customType({
+  userId: a.string().required(),
+  lastName: a.string(),
+  firstName: a.string(),
+  lastNameKana: a.string(),
+  firstNameKana: a.string(),
+  officeId: a.string(),
+  phoneNo: a.string(),
+  email: a.string(),
+  lineUserId: a.string(),
+  isEmailArrivalRequired: a.boolean(),
+  isEmailLeaveRequired: a.boolean(),
+  isLineArrivalRequired: a.boolean(),
+  isLineLeaveRequired: a.boolean(),
+});
+
+
 const schema = a.schema({
   Login: a
     .model({
@@ -39,21 +58,7 @@ const schema = a.schema({
       firstNameKana: a.string(),
       dob: a.string(),
       qrCodeName: a.string(),
-      guardians: a.customType({   
-         userId: a.string(),
-         lastName: a.string(),
-         firstName:	a.string(),
-         lastNameKana: a.string(),
-         firstNameKana: a.string(),
-         officeId: a.string(),
-         phoneNo: a.string(),
-         email: a.string(),
-         lineUserId: a.string(),
-         isEmailArrivalRequired: a.boolean(),
-         isEmailLeaveRequired: a.boolean(),
-         isLineArrivalRequired:	a.boolean(),
-         isLineLeaveRequired: a.boolean()
-      }),
+      guardians: a.UserGuardian.array(),
       officeId: a.string(),
       createdBy:a.string(),
       updatedBy:a.string(),
