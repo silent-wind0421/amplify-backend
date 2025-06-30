@@ -65,7 +65,7 @@ const schema = a.schema({
       version: a.integer()
     })
     .identifier(['recipientId'])
-
+    .addType('UserGuardian', UserGuardian)  // <-- 型の登録
     .authorization(allow => [
       allow.publicApiKey(),   
     //  allow.authenticated().to(["read"]),
