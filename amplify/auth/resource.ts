@@ -19,9 +19,9 @@ import { referenceAuth } from '@aws-amplify/backend';
 
 export const auth = referenceAuth({
   userPoolId: 'ap-northeast-1_qZe3b8qSj',
-  identityPoolId: 'ap-northeast-1:1248e024-9d90-45ea-affc-bc825aa3e2c6',
+  identityPoolId: 'ap-northeast-1:61ed2994-d310-471e-b1d1-cd9ee0a488c5',
   authRoleArn: 'arn:aws:iam::845531086046:role/service-role/adminaccess',
-  unauthRoleArn: 'arn:aws:iam::845531086046:role/service-role/unauthorized',
-  userPoolClientId: 'itbblcs3p0j2vse309pgieija',
+  unauthRoleArn: 'arn:aws:iam::845531086046:role/service-role/guest',
+  userPoolClientId: '1li0b757gut3kav5eounnu6f8t',
   
 });
